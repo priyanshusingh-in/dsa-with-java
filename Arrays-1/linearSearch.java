@@ -66,11 +66,15 @@ public class linearSearch {
  	}
   
   public static void main (String[] args) throws java.lang.Exception
-	{
-	    int[] arr=takeInput();
-      Scanner sc=new Scanner(System.in);
-      int x=sc.nextInt();//element to be searched
-      System.out.println( search(arr,x));
-	}
+       {
+	  Scanner sc=new Scanner(System.in);
+	  int testCases=sc.nextInt();
+	  for(int i=1;i<=testCases;i++)
+	  {
+           int[] arr=takeInput();
+           int x=sc.nextInt();//element to be searched
+           System.out.println( search(arr,x));
+	  }
+       }
   
 }
