@@ -41,8 +41,11 @@ Sample Output 2:
 
 */
 
+import java.io.*;
 public class linearSearch {
 
+    static BufferedReader br=new BufferedReader(new InputStreamReader (System.in));
+	
     public static int search(int arr[], int x) {
 		for(int i=0;i<arr.length;i++){
             if(x==arr[i])
@@ -51,28 +54,26 @@ public class linearSearch {
         return -1;
     }
   
-   public static int[] takeInput()
+   public static int[] takeInput() throws IOException
 	 {
-	    Scanner sc=new Scanner(System.in);
 	    System.out.println("enter size of array");
-	    int arrSize=sc.nextInt();
+	    int arrSize=Integer.parseInt(br.readLine());
 	    int[] arr=new int[arrSize];
 	    for(int i=0;i<arrSize;i++)
 	    {
 	         System.out.println("enter value for "+i+"th index");
-	         arr[i]=sc.nextInt();
+	         arr[i]=Integer.parseInt(br.readLine());
 	    }
 	    return arr;
  	}
   
-  public static void main (String[] args) throws java.lang.Exception
+  public static void main (String[] args) throws NumberFormatException, IOException
        {
-	  Scanner sc=new Scanner(System.in);
-	  int testCases=sc.nextInt();
+	  int testCases=Integer.parseInt(br.readLine());;
 	  for(int i=1;i<=testCases;i++)
 	  {
            int[] arr=takeInput();
-           int x=sc.nextInt();//element to be searched
+           int x=Integer.parseInt(br.readLine());//element to be searched
            System.out.println( search(arr,x));
 	  }
        }
