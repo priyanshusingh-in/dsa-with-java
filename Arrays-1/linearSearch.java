@@ -41,8 +41,8 @@ Sample Output 2:
 
 */
 
-import java.io.*;
-public class linearSearch {
+ import java.io.*;
+ public class Codechef {
 
     static BufferedReader br=new BufferedReader(new InputStreamReader (System.in));
 	
@@ -58,24 +58,35 @@ public class linearSearch {
 	 {
 	    System.out.println("enter size of array");
 	    int arrSize=Integer.parseInt(br.readLine());
+	    
 	    int[] arr=new int[arrSize];
-	    for(int i=0;i<arrSize;i++)
+	    if(arrSize==0)
 	    {
-	         System.out.println("enter value for "+i+"th index");
-	         arr[i]=Integer.parseInt(br.readLine());
+	        return arr;
+	    }
+	    
+	    String[] strNums;
+	    strNums=br.readLine().split("\\s");
+	   
+	    for(int i=0;i<arrSize;++i)
+	    {
+	         arr[i]=Integer.parseInt(strNums[i]);
 	    }
 	    return arr;
  	}
   
   public static void main (String[] args) throws NumberFormatException, IOException
        {
+	  
 	  int testCases=Integer.parseInt(br.readLine());;
-	  for(int i=1;i<=testCases;i++)
+	  while(testCases>0)
 	  {
-           int[] arr=takeInput();
-           int x=Integer.parseInt(br.readLine());//element to be searched
-           System.out.println( search(arr,x));
+	      int[] arr=takeInput();
+	      int x=Integer.parseInt(br.readLine());//element to be searched
+	      search(arr,x);
+	      
+	      testCases-=1;
 	  }
-       }
+     }
   
 }
