@@ -36,7 +36,7 @@ Sample Output 2:
 */
 
 
-public class Solution{  
+public class findDuplicate{  
     
     public static int duplicateNumber(int arr[]) {
        for(int i=0; i<(arr.length-1); i++){
