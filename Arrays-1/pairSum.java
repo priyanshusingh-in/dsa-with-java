@@ -47,7 +47,7 @@ For the second query, we have 2 pairs in total that sum up to 10. They are, (2, 
 
 */
 
-public class Solution {  
+public class pairSum {  
 
     public static int pairSum(int arr[], int x) {
     	int count=0;
