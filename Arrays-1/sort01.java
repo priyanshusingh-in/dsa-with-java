@@ -35,7 +35,7 @@ Sample Output 2:
 
 */
 
-public class Solution {  
+public class sort01 {  
 
     public static void sortZeroesAndOne(int[] arr) {
         int nextZero=0;
