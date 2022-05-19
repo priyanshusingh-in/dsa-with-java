@@ -39,25 +39,18 @@ Sample Output 2:
 public class selectionSort {  
 
     public static void selectionSort(int[] arr) {
-
-        for(int i=0;i<arr.length;i++){
-
-            int mini=arr[i];
-            int minIndex=i;
-
+        for(int i=0;i<arr.length-1;i++){
+            int minElement=Integer.MAX_VALUE;
+            int minIndex=-1;
             for(int j=i;j<arr.length;j++){
-
-                if(mini>arr[j]){
-                    mini=arr[j];
+                if(minElement>arr[j]){
+                    minElement=arr[j];
                     minIndex=j;
                 }
             }
-
-            int temp=arr[i];
-            arr[i]=arr[minIndex];
-            arr[minIndex]=temp;
-
+            int temp=arr[minIndex];
+            arr[minIndex]=arr[i];
+            arr[i]=temp;
         }
-    }   
-
+    }
 }
